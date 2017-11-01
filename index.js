@@ -1,14 +1,14 @@
 katz_deli = []
 
-def line(deli)
-  lineArr = []
-  if deli.size == 0
+def line(queue)
+  if queue.length == 0
       puts "The line is currently empty."
   else
-    result = deli.each_with_index.collect do |e, i|
-      "#{i+1}. #{e}"
+    total = []
+    queue.each_with_index do |person, index|
+    total << " #{index + 1}. #{person}"
     end
-    puts "The line is currently: " + result.join('')
+    puts "The line is currently: " + result.join
   end
 end
 
