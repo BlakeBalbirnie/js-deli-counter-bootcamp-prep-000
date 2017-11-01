@@ -1,7 +1,7 @@
 katz_deli = []
 
 def line(deli)
-  linArr = []
+  lineArr = []
   if deli.size == 0
       puts "The line is currently empty."
   else
