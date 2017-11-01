@@ -1,7 +1,7 @@
 katz_deli = []
 
-def line(katz_deli)
-
+def line(deli)
+  linArr = []
   if katz_deli == [] || katz_deli == nil then
       puts "The line is currently empty."
   else
