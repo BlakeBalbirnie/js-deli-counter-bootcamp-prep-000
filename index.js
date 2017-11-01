@@ -12,17 +12,17 @@ def line(queue)
   end
 end
 
-def take_a_number(arr,name)
-  arr << name
-  puts "Welcome, #{name}. You are number #{arr.size} in line."
+def take_a_number(line, person)
+  line << person
+  puts "Welcome, #{person}. You are number #{line.length} in line."
 end
 
-def now_serving(arr)
-  if arr.size == 0
+def now_serving(line)
+  if line.length
+  when 0
     puts "There is nobody waiting to be served!"
   else
-    puts "Currently serving #{arr.first}."
-    arr.shift()
+    puts "Currently serving #{line[0]}."
+    line.shift
   end
-
 end
