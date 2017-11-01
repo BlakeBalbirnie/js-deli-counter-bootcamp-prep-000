@@ -12,23 +12,17 @@ def line(deli)
   end
 end
 
-# print "The line is currently:"
-# count = 1;
-# katz_deli.each do |name|
-#   print " #{count}. #{name}"
-#   count +=1
-# end
-
-def take_a_number(katz_deli,name)
-  katz_deli << name
-  puts "Welcome, #{name}. You are number #{katz_deli.size} in line."
+def take_a_number(arr,name)
+  arr << name
+  puts "Welcome, #{name}. You are number #{arr.size} in line."
 end
 
-def now_serving(katz_deli)
-  if katz_deli == [] || katz_deli == nil then
+def now_serving(arr)
+  if arr.size == 0
     puts "There is nobody waiting to be served!"
   else
-    puts "Currently serving #{katz_deli[0]}.";
-    katz_deli.shift
+    puts "Currently serving #{arr.first}."
+    arr.shift()
   end
+
 end
