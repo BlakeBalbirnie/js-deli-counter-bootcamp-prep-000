@@ -2,16 +2,13 @@ katz_deli = []
 
 def line(deli)
   linArr = []
-  if katz_deli == [] || katz_deli == nil then
+  if deli.size == 0
       puts "The line is currently empty."
   else
-    line = "The line is currently:"
-    count = 1;
-    katz_deli.each do |name|
-      line = line + " #{count}. #{name}"
-      count +=1
+    result = deli.each_with_index.collect do |e, i|
+      "#{i+1}. #{e}"
     end
-    puts "#{line}"
+    puts "The line is currently: " + result.join('')
   end
 end
 
